@@ -72,7 +72,7 @@ public class Test {
 			System.out.println(annotition2);
 		}
 		
-//		Method[] methodDogClass2 = dogClass_2.getDeclaredMethods();
+    //	Method[] methodDogClass2 = dogClass_2.getDeclaredMethods();
 		
 		
 	//	dogClass_3.	
