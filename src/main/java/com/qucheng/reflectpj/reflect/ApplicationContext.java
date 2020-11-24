@@ -17,8 +17,7 @@ import com.qucheng.reflectpj.service.impl.UserServiceImpl;
 
 
 public class ApplicationContext<T> {
-	
-	
+
 	private  HashMap<Class, Object> beanFactory = new HashMap<>();
 	
 	public  T getBean(Class clazz) {
@@ -37,21 +36,16 @@ public class ApplicationContext<T> {
 				beanFactory.put(Class.forName(key.toString()), 
 						Class.forName(properties.getProperty(key.toString())).newInstance()  );
 				
-				System.out.println(key);
-			}
-			
+				System.out.println("key: "+key+" --value: "+properties.getProperty(key.toString()));
+			}			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}	
 /** 		
 		beanFactory.put(IUserDao.class, new UserDaoImpl());
 		beanFactory.put(IBookDao.class, new BookDaoImpl());
 		beanFactory.put(UserService.class, new UserServiceImpl());
-		beanFactory.put(BookService.class, new BookServiceImpl());
-	
+		beanFactory.put(BookService.class, new BookServiceImpl());	
 **/	
 	}
-		
-	
 }

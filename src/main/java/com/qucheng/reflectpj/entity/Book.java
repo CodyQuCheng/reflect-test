@@ -11,6 +11,9 @@ public class Book {
 		this.id = id;
 		this.name = name;
 	}
+	
+	public Book() {}
+	
 	public int getId() {
 		return id;
 	}
